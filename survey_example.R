@@ -17,4 +17,15 @@ weights <- weights %>% mutate(Weight = Weight/100)
 
 dat <- read_csv("FinalCleanedData_long.csv")
 
+
 final <- left_join(dat, weights, by = "ID")
+
+final_clean <- na.omit(final)
+
+nlsy_design <- svydesign(
+  id = ~ID,        
+  weights = ~Weight, 
+  data = final_clean
+)
+
+svymean(final_clean, nlsy_design)
