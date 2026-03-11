@@ -6,7 +6,7 @@ olddat <- as.data.frame(olddat)
 
 
 names(dat)[1] <- "ID"
-dat_long <- dat %>% select(ID, CatholicT1:NoAnswerResidenceT4) %>% 
+dat_long <- dat %>% select(ID, NoDegreeT1:NoAnswerResidenceT4) %>% 
   pivot_longer(
     cols = -ID,
     names_to = c(".value", "Time"),
