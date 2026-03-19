@@ -7,7 +7,7 @@ weights <- read.table("customweight_nlsy97_6989725f19c40e6c583.dat") %>%
   rename(ID = V1, Weight = V2) %>%
   mutate(Weight = Weight / 100)
 
-dat <- read_csv("FinalCleanedData_long.csv")
+dat <- read_csv("FinalCleanedData_long1.csv")
 
 final <-
   dat %>%

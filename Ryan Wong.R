@@ -30,7 +30,7 @@ dat_long <- dat_long %>% left_join(dat %>% select(ID,
 
 dat_long %>% View()
 
-write.csv(dat_long , file = "FinalCleanedData_long.csv", row.names = FALSE)
+write.csv(dat_long , file = "FinalCleanedData_long1.csv", row.names = FALSE)
 #Person 8 has weird education order 54 too
  
 
